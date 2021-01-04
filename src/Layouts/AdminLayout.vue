@@ -133,6 +133,7 @@ export default {
       { title: "Pengumuman", icon: "mdi-bullhorn", path: "pengumuman" },
     ],
     appSettingsMenu: [
+      { title: "User Accounts", icon: "mdi-account-circle", path: "users" },
       { title: "Template", icon: "mdi-view-quilt", path: "template" },
       { title: "UI Settings", icon: "mdi-view-day", path: "ui-settings" },
     ],

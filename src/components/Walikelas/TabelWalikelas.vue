@@ -7,14 +7,14 @@
   >
     <template v-slot:top>
       <v-toolbar flat rounded="lg">
-        <v-toolbar-title>Data Siswa</v-toolbar-title>
+        <v-toolbar-title>Data Walikelas</v-toolbar-title>
         <v-divider class="mx-4" inset vertical></v-divider>
         <v-spacer></v-spacer>
 
         <v-dialog v-model="dialog" max-width="500px">
           <template v-slot:activator="{ on, attrs }">
             <v-btn color="success" dark class="mb-2" v-bind="attrs" v-on="on">
-              <v-icon class="mr-3">mdi-plus</v-icon> Import Data Siswa
+              <v-icon class="mr-3">mdi-plus</v-icon> Tambah Walikelas
             </v-btn>
           </template>
           <v-card>
@@ -80,7 +80,7 @@
 
 <script>
 export default {
-  name: "TabelSiswa",
+  name: "TabelWalikelas",
   data: () => ({
     dialog: false,
     dialogDelete: false,

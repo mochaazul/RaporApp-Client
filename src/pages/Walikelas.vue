@@ -1,12 +1,15 @@
 <template>
   <v-row>
-    <v-col> Data wakel</v-col>
+    <v-col cols="12"> 
+      <tabel-walikelas/>
+    </v-col>
   </v-row>
 </template>
 
 <script>
-export default {};
+import TabelWalikelas from '../components/Walikelas/TabelWalikelas.vue';
+export default {
+  name:"Walikelas",
+  components:{TabelWalikelas}
+};
 </script>
-
-<style>
-</style>
