@@ -1,11 +1,14 @@
 <template>
   <v-row>
-    <v-col> Data peng</v-col>
+    <v-col cols="12"> <pengumuman-list-table/> </v-col>
   </v-row>
 </template>
 
 <script>
-export default {};
+import PengumumanListTable from "../components/Pengumuman/PengumumanListTable.vue";
+export default {
+  components: { PengumumanListTable },
+};
 </script>
 
 <style>

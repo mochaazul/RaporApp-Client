@@ -20,7 +20,7 @@ const routes = [
       },
       {
         path: '/admin/datasiswa',
-        name: 'Datasiswa',
+        name: 'Data Siswa',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
@@ -28,7 +28,7 @@ const routes = [
       },
       {
         path: '/admin/walikelas',
-        name: 'Walikelas',
+        name: 'Wali Kelas',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
@@ -67,6 +67,14 @@ const routes = [
         component: () => import('../pages/Pengumuman.vue')
       },
       {
+        path: '/admin/users',
+        name: 'User Accounts',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../pages/UserAccounts.vue')
+      },
+      {
         path: '/admin/template',
         name: 'Template Settings',
         // route level code-splitting
@@ -80,7 +88,7 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import('../pages/SettingsApp.vue')
+        component: () => import('../components/Prints/RaportLayout.vue')
       },
       {
         path: "/admin/*",
