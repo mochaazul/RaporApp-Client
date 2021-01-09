@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'ax'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -15,7 +15,7 @@ export default new Vuex.Store({
   },
   actions: {
     fetchSiswas({commit}){
-      axios
+      axios.get("/")
     }
   }
 })
