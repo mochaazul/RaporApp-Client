@@ -9,6 +9,7 @@
 <script>
 import TabelSiswa from '../components/DataSiswa/TabelSiswa.vue';
 export default {
-  components:{TabelSiswa}
+  components:{TabelSiswa},
+ 
 };
 </script>
