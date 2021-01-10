@@ -1,6 +1,14 @@
 <template>
   <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
-    <!-- SIDEBAR MENU -->
+    <!-- SYSTEM BAR -->
+    
+    <v-system-bar height=24 app class="draggable">
+        <h5>Rapor App Admin </h5>
+        <v-spacer></v-spacer>
+        <v-icon class="no-drag" @click="onMinimze">mdi-minus</v-icon>
+        <v-icon class="no-drag" @click="onMaximize">mdi-checkbox-blank-outline</v-icon>
+        <v-icon class="no-drag" @click="onClose">mdi-close</v-icon>      
+    </v-system-bar>
     <v-navigation-drawer app mobile-breakpoint="640" v-model="drawer">
       <v-list-item>
         <v-list-item-content>
@@ -86,7 +94,7 @@
               {{ currentPage }}
             </h2>
           </v-col>
-        </v-row>       
+        </v-row>
         <v-divider class="mb-5"></v-divider>
         <router-view></router-view>
       </v-container>
@@ -96,6 +104,10 @@
 
 <script>
 import HelloWorld from "../components/HelloWorld";
+var userAgent = navigator.userAgent.toLowerCase();
+if (userAgent.indexOf(' electron/') > -1) {
+  const {remote} = require('electron')   
+}
 
 export default {
   name: "App",
@@ -110,6 +122,22 @@ export default {
 
   components: {
     HelloWorld,
+  },
+  methods:{
+    onClose(){
+      remote.getCurrentWindow().close()
+    },
+    onMaximize(){
+      let win = remote.getCurrentWindow()
+      if(win.isMaximized()){
+        win.unmaximize()
+      }else{
+        win.maximize()
+      }
+    },
+    onMinimze(){
+      remote.getCurrentWindow().minimize()
+    }
   },
 
   data: () => ({
@@ -160,4 +188,14 @@ export default {
 </script>
 
 <style >
+.draggable{
+  -webkit-app-region:drag;
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: drag;
+  
+}
+.no-drag{
+  -webkit-app-region:no-drag;
+}
 </style>
