@@ -20,6 +20,7 @@
     "tiptap-extensions": "^1.33.2",
     "vue": "^2.6.11",
     "vue-apexcharts": "^1.6.0",
+    "vue-awesome-notifications": "^3.1.1",
     "vue-html2pdf": "^1.8.0",
     "vue-router": "^3.2.0",
     "vuetify": "^2.2.11",

@@ -3,10 +3,14 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
-import VueApexCharts from 'vue-apexcharts'
 
-Vue.use(VueApexCharts)
-Vue.component('apexchart', VueApexCharts)
+import VueAWN from 'vue-awesome-notifications';
+const AWNOptions = {
+
+}
+Vue.use(VueAWN, AWNOptions)
+
+
 Vue.config.productionTip = false
 
 new Vue({
