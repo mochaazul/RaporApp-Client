@@ -104,10 +104,7 @@
 
 <script>
 import HelloWorld from "../components/HelloWorld";
-var userAgent = navigator.userAgent.toLowerCase();
-if (userAgent.indexOf(' electron/') > -1) {
-  const {remote} = require('electron')   
-}
+import {remote} from 'electron'
 
 export default {
   name: "App",
